@@ -1,11 +1,9 @@
 package task4;
 
-import task1.Customer;
-
-import java.time.LocalDate;
 import java.util.Arrays;
 
 public class Main {
+
     public static void main(String[] args) {
         Patient[] patients = {new Patient(1, "Sidorov", "Sergey", "Sergeevich",
                 "16448879", 28, 234567),
@@ -18,9 +16,12 @@ public class Main {
                 new Patient(5, "Zerkaliy", "Alina", "Vitaliivna",
                         "546646546", 27, 174523)
         };
+
         Patient.sortBySurname(patients);
         Arrays.stream(patients).forEach(System.out::println);
+
         System.out.println();
+
         Patient.sortByAge(patients);
         Arrays.stream(patients).forEach(System.out::println);
     }
